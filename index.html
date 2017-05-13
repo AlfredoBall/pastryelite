@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <link href="index.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="data.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <style>
+         /* Always set the map height explicitly to define the size of the div
+        * element that contains the map. */
+         /* Optional: Makes the sample page fill the window. */
+         html, body {
+             height: 100%;
+             margin: 0;
+             padding: 0;
+         }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div>
+            <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+            <div id="map"></div>
+        </div>
+        <div id="locations">
+        </div>
+    </div>
+    
+    <script>
+      var map;
+        function initMap() {
+            var script = document.createElement('script');
+            script.src = 'index.js';
+            document.head.appendChild(script);
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQtiPdrH3TbV970I5iHm4s7rAx-bwFZnw&callback=initMap&libraries=places"
+           async defer>
+
+    </script>
+</body>
+</html>
